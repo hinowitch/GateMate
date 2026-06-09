@@ -1,169 +1,36 @@
-/* ==========================================================================
-   1. GLOBAL STYLES & DARK MODE
-   ========================================================================== */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+/* 1. GLOBAL STYLES */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #121214; color: #e1e1e6; line-height: 1.6; padding-bottom: 60px; }
+.container { max-width: 800px; margin: 0 auto; padding: 20px; }
 
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #121214;
-    color: #e1e1e6;
-    line-height: 1.6;
-    padding-bottom: 60px;
-}
+/* 2. HERO SECTION */
+.hero { background: linear-gradient(135deg, #1f1f23 0%, #29292e 100%); padding: 60px 0; text-align: center; border-bottom: 2px solid #00adb5; }
+.hero h1 { font-size: 3rem; color: #00adb5; margin-bottom: 10px; }
+.hero .tagline { font-size: 1.2rem; color: #a4a4b2; margin-bottom: 20px; }
+.badge { background-color: #ff9f43; color: #121214; padding: 6px 12px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; }
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-}
+/* 3. SECTIONS */
+section { background-color: #1f1f23; padding: 30px; border-radius: 8px; margin-top: 30px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+h2 { color: #00adb5; margin-bottom: 15px; }
 
-/* ==========================================================================
-   2. HERO SECTION
-   ========================================================================== */
-.hero {
-    background: linear-gradient(135deg, #1f1f23 0%, #29292e 100%);
-    padding: 60px 0;
-    text-align: center;
-    border-bottom: 2px solid #00adb5;
-}
+/* 4. BUTTONS */
+.button-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px; }
+.btn { display: inline-block; text-align: center; padding: 12px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; opacity: 0.6; cursor: not-allowed; }
+.btn-cults { background-color: #5d5bde; color: white; }
+.btn-printables { background-color: #fa541c; color: white; }
+.btn-download { display: inline-block; background-color: #00adb5; color: #121214; text-decoration: none; padding: 12px 24px; font-weight: bold; border-radius: 6px; margin-top: 15px; transition: 0.2s; }
+.btn-download:hover { background-color: #00fff2; transform: translateY(-2px); }
 
-.hero h1 {
-    font-size: 3rem;
-    color: #00adb5;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-}
+/* 5. SOCIAL MEDIA */
+.social-links { display: flex; gap: 15px; margin-top: 15px; }
+.social-btn { flex: 1; text-align: center; padding: 10px; text-decoration: none; font-weight: bold; border-radius: 6px; color: #fff; opacity: 0.6; }
+.instagram { background: linear-gradient(45deg, #f09433 0%, #dc2743 50%, #bc1888 100%); }
+.youtube { background-color: #ff0000; }
 
-.hero .tagline {
-    font-size: 1.2rem;
-    color: #a4a4b2;
-    margin-bottom: 20px;
-}
+/* 6. GALLERY & IMAGE */
+.gallery-section { text-align: center; }
+.project-image { margin-top: 20px; }
+.project-image img { max-width: 100%; height: auto; border-radius: 8px; border: 2px solid #00adb5; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); }
 
-.badge {
-    background-color: #ff9f43;
-    color: #121214;
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-weight: bold;
-    font-size: 0.9rem;
-}
-
-/* ==========================================================================
-   3. SECTIONS & CONTENT
-   ========================================================================== */
-section {
-    background-color: #1f1f23;
-    padding: 30px;
-    border-radius: 8px;
-    margin-top: 30px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    color: #00adb5;
-    margin-bottom: 15px;
-}
-
-/* ==========================================================================
-   4. BUTTONS & LINKS
-   ========================================================================== */
-.button-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-@media (max-width: 600px) {
-    .button-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-.btn {
-    display: inline-block;
-    text-align: center;
-    padding: 12px 20px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: transform 0.2s, opacity 0.2s;
-    opacity: 0.6; /* Light opacity because it's "Coming Soon" */
-    cursor: not-allowed;
-}
-
-.btn-cults {
-    background-color: #5d5bde;
-    color: white;
-}
-
-.btn-printables {
-    background-color: #fa541c;
-    color: white;
-}
-
-/* PDF Download Button */
-.btn-download {
-    display: inline-block;
-    background-color: #00adb5;
-    color: #121214;
-    text-decoration: none;
-    padding: 12px 24px;
-    font-weight: bold;
-    border-radius: 6px;
-    margin-top: 15px;
-    transition: background-color 0.2s, transform 0.2s;
-}
-
-.btn-download:hover {
-    background-color: #00fff2;
-    transform: translateY(-2px);
-}
-
-/* ==========================================================================
-   5. SOCIAL MEDIA / DEV LOGS
-   ========================================================================== */
-.social-links {
-    display: flex;
-    gap: 15px;
-    margin-top: 15px;
-}
-
-.social-btn {
-    flex: 1;
-    text-align: center;
-    padding: 10px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 6px;
-    color: #fff;
-    transition: opacity 0.2s;
-    opacity: 0.6
-}
-
-.social-btn:hover {
-    opacity: 0.8;
-}
-
-.instagram {
-    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-}
-
-.youtube {
-    background-color: #ff0000;
-}
-
-/* ==========================================================================
-   6. FOOTER
-   ========================================================================== */
-footer {
-    text-align: center;
-    margin-top: 50px;
-    color: #666;
-    font-size: 0.9rem;
-}
+/* 7. FOOTER */
+footer { text-align: center; margin-top: 50px; color: #666; font-size: 0.9rem; }
